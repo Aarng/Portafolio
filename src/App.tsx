@@ -134,7 +134,7 @@ function App() {
                     Contact Me <ChevronRight className="ml-2 h-4 w-4" />
                   </a>
                   <a
-                    href="src/static/UNAB-Alex Aranguiz-CV.docx"
+                    href="src/static/UNAB-Alex Aranguiz-CVFinal.docx"
                     className="border border-gray-300 dark:border-gray-600 px-6 py-3 rounded-lg flex items-center hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 transition-colors duration-200"
                   >
                     Download CV <Download className="ml-2 h-4 w-4" />
