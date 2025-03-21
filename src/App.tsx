@@ -12,16 +12,17 @@ import ProjectCard from './components/ProjectCard';
 import SkillBar from './components/SkillBar';
 import { ThemeProvider } from './components/ThemeProvider';
 import ThemeToggle from './components/ThemeToggle';
+import profile from "./static/Profile.jpg";
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
 
   const skills = [
     { name: 'React', proficiency: 90 },
-    { name: 'TypeScript', proficiency: 85 },
+    { name: 'TypeScript', proficiency: 70 },
     { name: 'Node.js', proficiency: 80 },
     { name: 'Python', proficiency: 75 },
-    { name: 'AWS', proficiency: 70 },
+    { name: 'javaScript', proficiency: 90 },
   ];
 
   const projects = [
@@ -47,8 +48,8 @@ function App() {
       technologies: ['React', 'Typescript', 'D3.js', 'vite'],
       image:
         'https://images.unsplash.com/photo-1642952469120-eed4b65104be?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      liveLink: 'https://example.com/taskmanager',
-      githubLink: 'https://github.com/username/ai-tasks',
+      liveLink: 'https://aarng.github.io/Algorithm-Visualizer/',
+      githubLink: 'https://github.com/Aarng/Algorithm-Visualizer',
     },
     {
       title: 'Gallery-Hexa',
@@ -126,7 +127,7 @@ function App() {
                     Contact Me <ChevronRight className="ml-2 h-4 w-4" />
                   </a>
                   <a
-                    href="/resume.pdf"
+                    href="src/static/UNAB-Alex Aranguiz-CV.docx"
                     className="border border-gray-300 dark:border-gray-600 px-6 py-3 rounded-lg flex items-center hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 transition-colors duration-200"
                   >
                     Download CV <Download className="ml-2 h-4 w-4" />
@@ -135,7 +136,7 @@ function App() {
               </div>
               <div className="md:w-1/2 mt-12 md:mt-0">
                 <img
-                  src="./static/profile.jpg"
+                  src={profile}
                   alt="Alex Aranguiz"
                   className="rounded-full w-64 h-64 object-cover mx-auto shadow-lg"
                 />
@@ -156,17 +157,21 @@ function App() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                  With over 8 years of experience in software development, I
-                  specialize in building scalable web applications that solve
-                  real-world problems. My journey in tech started when I built
-                  my first website at 15, and I've been passionate about
-                  creating digital solutions ever since.
+                Computer Science & IT Engineer
+                I am a results-driven professional with excellent communication skills and 
+                deep expertise in programming languages and database processes. 
+                
+                </p>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                With a strong background in process analysis, documentation, project management, 
+                and continuous improvement, I excel at implementing technological solutions and optimizing 
+                operations. My focus on data analysis and digital transformation has consistently
+                enhanced customer satisfaction and operational efficiency.
                 </p>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                   I believe in writing clean, maintainable code and staying
                   up-to-date with the latest technologies. When I'm not coding,
-                  you can find me contributing to open source projects or
-                  mentoring aspiring developers.
+                  you can find me learning about new technologies.
                 </p>
               </div>
               <div>
@@ -176,19 +181,19 @@ function App() {
                 <ul className="space-y-3">
                   <li className="flex items-center text-gray-600 dark:text-gray-300">
                     <ChevronRight className="h-4 w-4 text-blue-600 dark:text-blue-400 mr-2" />
-                    Based in San Francisco, CA
+                    Born in Santiago de Chile
                   </li>
                   <li className="flex items-center text-gray-600 dark:text-gray-300">
                     <ChevronRight className="h-4 w-4 text-blue-600 dark:text-blue-400 mr-2" />
-                    8+ Years of Professional Experience
+                    2+ Years of Professional Experience
                   </li>
                   <li className="flex items-center text-gray-600 dark:text-gray-300">
                     <ChevronRight className="h-4 w-4 text-blue-600 dark:text-blue-400 mr-2" />
-                    50+ Projects Completed
+                    10+ Projects Completed
                   </li>
                   <li className="flex items-center text-gray-600 dark:text-gray-300">
                     <ChevronRight className="h-4 w-4 text-blue-600 dark:text-blue-400 mr-2" />
-                    Master's in Computer Science
+                    Bachelor's Degree in Computer Science
                   </li>
                 </ul>
               </div>
@@ -264,57 +269,7 @@ function App() {
           </div>
         </section>
 
-        {/* Experience Section */}
-        <section
-          className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-200"
-          id="experience"
-        >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
-              Professional Experience
-            </h2>
-            <div className="space-y-12">
-              <div className="border-l-4 border-blue-600 pl-6">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  Senior Software Engineer
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Tech Corp Inc. • 2020 - Present
-                </p>
-                <ul className="mt-4 space-y-2">
-                  <li className="text-gray-600 dark:text-gray-300">
-                    Led development of microservices architecture
-                  </li>
-                  <li className="text-gray-600 dark:text-gray-300">
-                    Improved system performance by 40%
-                  </li>
-                  <li className="text-gray-600 dark:text-gray-300">
-                    Mentored junior developers
-                  </li>
-                </ul>
-              </div>
-              <div className="border-l-4 border-blue-600 pl-6">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  Full Stack Developer
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Digital Solutions Ltd. • 2018 - 2020
-                </p>
-                <ul className="mt-4 space-y-2">
-                  <li className="text-gray-600 dark:text-gray-300">
-                    Built and maintained client applications
-                  </li>
-                  <li className="text-gray-600 dark:text-gray-300">
-                    Implemented CI/CD pipelines
-                  </li>
-                  <li className="text-gray-600 dark:text-gray-300">
-                    Reduced deployment time by 60%
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
+       
 
         {/* Contact Section */}
         <section
