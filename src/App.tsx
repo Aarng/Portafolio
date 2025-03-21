@@ -62,6 +62,14 @@ function App() {
     },
   ];
 
+  const scrollToSection = (sectionId: string) => {
+    setActiveSection(sectionId);
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <ThemeProvider>
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
@@ -81,12 +89,11 @@ function App() {
                     'about',
                     'skills',
                     'projects',
-                    'experience',
                     'contact',
                   ].map((section) => (
                     <button
                       key={section}
-                      onClick={() => setActiveSection(section)}
+                      onClick={() => scrollToSection(section)}
                       className={`${
                         activeSection === section
                           ? 'text-blue-600 dark:text-blue-400'
@@ -104,7 +111,7 @@ function App() {
         </nav>
 
         {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 transition-colors duration-200">
+        <section id="home" className="pt-32 pb-20 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 transition-colors duration-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row items-center justify-between">
               <div className="md:w-1/2">
@@ -254,8 +261,8 @@ function App() {
 
         {/* Projects Section */}
         <section
-          className="py-20 bg-white dark:bg-gray-800 transition-colors duration-200"
           id="projects"
+          className="py-20 bg-white dark:bg-gray-800 transition-colors duration-200"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
@@ -269,12 +276,10 @@ function App() {
           </div>
         </section>
 
-       
-
         {/* Contact Section */}
         <section
-          className="py-20 bg-white dark:bg-gray-800 transition-colors duration-200"
           id="contact"
+          className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-200"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
